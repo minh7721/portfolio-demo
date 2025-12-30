@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About | NEO-VIBE</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: #050505;
+        --color-surface: #121212;
+        --color-primary: #d4ff00;
+        --color-text-main: #ededed;
+        --color-text-muted: #888888;
+
+        --font-sans: "Inter", sans-serif;
+        --font-display: "Space Grotesk", sans-serif;
+      }
+
+      body {
+        background-color: var(--color-background);
+        color: var(--color-text-main);
+        font-family: var(--font-sans);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-display);
+      }
+
+      .glass-panel {
+        background: rgba(18, 18, 18, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .bento-card {
+        background-color: var(--color-surface);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .bento-card:hover {
+        border-color: rgba(212, 255, 0, 0.3);
+        transform: translateY(-4px);
+      }
+
+      /* Polaroid Effect */
+      .polaroid {
+        background: white;
+        padding: 12px 12px 40px 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        transition: transform 0.4s ease;
+      }
+
+      .polaroid:hover {
+        transform: scale(1.1) rotate(0deg) !important;
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body class="antialiased overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 py-4">
+      <div class="container mx-auto px-6">
+        <nav
+          class="glass-panel rounded-full px-6 py-3 flex items-center justify-between"
+        >
+          <a href="index.html" class="text-2xl font-bold tracking-tighter">
+            NEO<span class="text-[var(--color-primary)]">-VIBE</span>
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="about.html"
+              class="text-sm font-medium text-[var(--color-primary)]"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors"
+              >Services</a
+            >
+            <a
+              href="blog.html"
+              class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors"
+              >Blog</a
+            >
+            <a
+              href="contact.html"
+              class="px-5 py-2 bg-[var(--color-primary)] text-black font-bold rounded-full hover:bg-white transition-colors"
+            >
+              Lets Talk
+            </a>
+          </div>
+
+          <button class="md:hidden text-white">
+            <i data-lucide="menu"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-32 pb-20">
+      <!-- Intro Section -->
+      <section class="container mx-auto px-6 mb-24">
+        <div class="max-w-4xl">
+          <h1
+            class="text-6xl md:text-8xl font-bold tracking-tighter mb-8 leading-[0.9]"
+          >
+            NOT JUST A <span class="text-[var(--color-primary)]">CODER</span>.
+            <br />A CREATOR.
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-[var(--color-text-muted)] leading-relaxed"
+          >
+            I'm a multidisciplinary creative bridging the gap between design and
+            engineering. With over a decade of experience in the digital space,
+            I build immersive web experiences that leave a lasting impression.
+          </p>
+        </div>
+      </section>
+
+      <!-- Stats Grid (Bento) -->
+      <section class="container mx-auto px-6 mb-32">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div
+            class="bento-card p-8 rounded-3xl flex flex-col items-center justify-center text-center"
+          >
+            <span class="text-5xl font-bold mb-2">12+</span>
+            <span
+              class="text-[var(--color-text-muted)] text-sm uppercase tracking-widest"
+              >Years Exp</span
+            >
+          </div>
+          <div
+            class="bento-card p-8 rounded-3xl flex flex-col items-center justify-center text-center"
+          >
+            <span class="text-5xl font-bold mb-2">140+</span>
+            <span
+              class="text-[var(--color-text-muted)] text-sm uppercase tracking-widest"
+              >Projects</span
+            >
+          </div>
+          <div
+            class="bento-card p-8 rounded-3xl flex flex-col items-center justify-center text-center"
+          >
+            <span class="text-5xl font-bold mb-2">∞</span>
+            <span
+              class="text-[var(--color-text-muted)] text-sm uppercase tracking-widest"
+              >Coffee</span
+            >
+          </div>
+          <div
+            class="bento-card p-8 rounded-3xl flex flex-col items-center justify-center text-center"
+          >
+            <span class="text-5xl font-bold mb-2 text-[var(--color-primary)]"
+              >24</span
+            >
+            <span
+              class="text-[var(--color-text-muted)] text-sm uppercase tracking-widest"
+              >Awards</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline & Gallery Split -->
+      <section class="container mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-20">
+          <!-- Timeline -->
+          <div>
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-3">
+              <i data-lucide="history" class="text-[var(--color-primary)]"></i>
+              V. 1.0 -> Latest
+            </h2>
+
+            <div class="space-y-12 border-l border-white/10 pl-8 relative">
+              <!-- Item 1 -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[39px] top-1 w-5 h-5 rounded-full bg-[var(--color-primary)] border-4 border-[var(--color-background)]"
+                ></div>
+                <span class="text-sm text-[var(--color-text-muted)] mb-2 block"
+                  >2023 - Present</span
+                >
+                <h3 class="text-xl font-bold mb-1">Senior Product Designer</h3>
+                <p class="text-[var(--color-text-muted)]">
+                  Google &bull; Mountain View, CA
+                </p>
+                <p class="text-[var(--color-text-muted)] mt-2 text-sm">
+                  Leading design systems for the next gen AI interfaces.
+                </p>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[39px] top-1 w-5 h-5 rounded-full bg-[var(--color-surface)] border border-white/20"
+                ></div>
+                <span class="text-sm text-[var(--color-text-muted)] mb-2 block"
+                  >2020 - 2023</span
+                >
+                <h3 class="text-xl font-bold mb-1">Lead Frontend Engineer</h3>
+                <p class="text-[var(--color-text-muted)]">
+                  Spotify &bull; New York, NY
+                </p>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="relative">
+                <div
+                  class="absolute -left-[39px] top-1 w-5 h-5 rounded-full bg-[var(--color-surface)] border border-white/20"
+                ></div>
+                <span class="text-sm text-[var(--color-text-muted)] mb-2 block"
+                  >2018 - 2020</span
+                >
+                <h3 class="text-xl font-bold mb-1">UI/UX Designer</h3>
+                <p class="text-[var(--color-text-muted)]">
+                  Pentagram &bull; London, UK
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scattered Gallery -->
+          <div class="relative h-[600px] flex items-center justify-center">
+            <div class="polaroid absolute w-64 rotate-[-6deg] top-10 left-10">
+              <img
+                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=600&auto=format&fit=crop"
+                class="w-full h-auto grayscale"
+              />
+            </div>
+            <div
+              class="polaroid absolute w-60 rotate-[12deg] bottom-20 right-10 z-10"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop"
+                class="w-full h-auto grayscale"
+              />
+            </div>
+            <div class="polaroid absolute w-56 rotate-[-15deg] top-40 right-20">
+              <img
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=600&auto=format&fit=crop"
+                class="w-full h-auto grayscale"
+              />
+            </div>
+            <div class="polaroid absolute w-64 rotate-[3deg] bottom-10 left-20">
+              <img
+                src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=600&auto=format&fit=crop"
+                class="w-full h-auto grayscale"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/10">
+      <div
+        class="container mx-auto px-6 flex justify-between items-center text-sm text-[var(--color-text-muted)]"
+      >
+        <p>&copy; 2025 NEO-VIBE Template.</p>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

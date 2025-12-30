@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEO-VIBE | Digital Architect</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: #050505;
+        --color-surface: #121212;
+        --color-primary: #d4ff00;
+        --color-text-main: #ededed;
+        --color-text-muted: #888888;
+
+        --font-sans: "Inter", sans-serif;
+        --font-display: "Space Grotesk", sans-serif;
+
+        --animate-marquee: marquee 25s linear infinite;
+
+        @keyframes marquee {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      }
+
+      body {
+        background-color: var(--color-background);
+        color: var(--color-text-main);
+        font-family: var(--font-sans);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-display);
+      }
+
+      .glass-panel {
+        background: rgba(18, 18, 18, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .bento-card {
+        background-color: var(--color-surface);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .bento-card:hover {
+        border-color: rgba(212, 255, 0, 0.3);
+        transform: translateY(-4px);
+        box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+      }
+
+      .text-glow {
+        text-shadow: 0 0 20px rgba(212, 255, 0, 0.15);
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-primary);
+      }
+    </style>
+  </head>
+  <body class="antialiased overflow-x-hidden">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 py-4">
+      <div class="container mx-auto px-6">
+        <nav
+          class="glass-panel rounded-full px-6 py-3 flex items-center justify-between"
+        >
+          <a href="index.html" class="text-2xl font-bold tracking-tighter">
+            NEO<span class="text-[var(--color-primary)]">-VIBE</span>
+          </a>
+
+          <!-- Desktop Menu -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="about.html"
+              class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors"
+              >Services</a
+            >
+            <a
+              href="blog.html"
+              class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors"
+              >Blog</a
+            >
+            <a
+              href="contact.html"
+              class="px-5 py-2 bg-[var(--color-primary)] text-black font-bold rounded-full hover:bg-white transition-colors"
+            >
+              Lets Talk
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden text-white">
+            <i data-lucide="menu"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="min-h-screen flex items-center pt-24 relative overflow-hidden"
+      >
+        <!-- Background Elements -->
+        <div
+          class="absolute top-20 right-0 w-[500px] h-[500px] bg-[var(--color-primary)]/10 rounded-full blur-[120px] -z-10"
+        ></div>
+
+        <div
+          class="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center"
+        >
+          <div class="space-y-8">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-xs tracking-widest uppercase"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-[var(--color-primary)] animate-pulse"
+              ></span>
+              Available for hire
+            </div>
+
+            <h1
+              class="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter"
+            >
+              DIGITAL<br />
+              <span
+                class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500"
+                >ARCHITECT</span
+              >
+            </h1>
+
+            <p class="text-xl text-[var(--color-text-muted)] max-w-md">
+              Crafting immersive digital experiences that bridge the gap between
+              imagination and technology.
+            </p>
+
+            <div class="flex items-center gap-4">
+              <a
+                href="#projects"
+                class="group flex items-center gap-2 border-b border-[var(--color-primary)] pb-1 hover:text-[var(--color-primary)] transition-colors"
+              >
+                View Selected Work
+                <i
+                  data-lucide="arrow-right"
+                  class="group-hover:translate-x-1 transition-transform"
+                ></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="relative">
+            <div
+              class="relative z-10 w-full aspect-[4/5] rounded-[2rem] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 group"
+            >
+              <img
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+                alt="Portrait"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-60"
+              ></div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div
+              class="absolute -bottom-10 -left-10 w-24 h-24 border border-[var(--color-primary)] rounded-full flex items-center justify-center text-[var(--color-primary)] animate-[spin_10s_linear_infinite]"
+            >
+              <i data-lucide="star" class="w-8 h-8"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Role Switcher (Simulated) -->
+      <section class="py-12 border-y border-white/5">
+        <div class="container mx-auto px-6">
+          <div class="flex justify-center">
+            <div class="glass-panel p-1.5 rounded-full inline-flex">
+              <button
+                class="px-6 py-2 rounded-full bg-[var(--color-surface)] text-white font-medium shadow-lg"
+              >
+                Developer
+              </button>
+              <button
+                class="px-6 py-2 rounded-full text-[var(--color-text-muted)] hover:text-white transition-colors"
+              >
+                Designer
+              </button>
+              <button
+                class="px-6 py-2 rounded-full text-[var(--color-text-muted)] hover:text-white transition-colors"
+              >
+                Artist
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Work -->
+      <section id="projects" class="py-32">
+        <div class="container mx-auto px-6">
+          <h2 class="text-4xl md:text-6xl font-bold mb-16 tracking-tighter">
+            SELECTED WORK <span class="text-[var(--color-primary)]">.</span>
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <article class="bento-card rounded-3xl overflow-hidden group">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1600607686527-6fb886090705?q=80&w=800&auto=format&fit=crop"
+                  alt="Project 1"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-8">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-2xl font-bold">Neon Horizon</h3>
+                  <i
+                    data-lucide="arrow-up-right"
+                    class="text-[var(--color-primary)]"
+                  ></i>
+                </div>
+                <p class="text-[var(--color-text-muted)] mb-6">
+                  Cyberpunk e-commerce experience built for the future of
+                  fashion.
+                </p>
+                <div class="flex gap-2">
+                  <span
+                    class="px-3 py-1 rounded-full border border-white/10 text-xs text-[var(--color-text-muted)]"
+                    >Next.js</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full border border-white/10 text-xs text-[var(--color-text-muted)]"
+                    >WebGL</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article
+              class="bento-card rounded-3xl overflow-hidden group md:col-span-2 lg:col-span-1"
+            >
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=800&auto=format&fit=crop"
+                  alt="Project 2"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-8">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-2xl font-bold">Retro Interface</h3>
+                  <i
+                    data-lucide="arrow-up-right"
+                    class="text-[var(--color-primary)]"
+                  ></i>
+                </div>
+                <p class="text-[var(--color-text-muted)] mb-6">
+                  Synthesizer control dashboard design system.
+                </p>
+                <div class="flex gap-2">
+                  <span
+                    class="px-3 py-1 rounded-full border border-white/10 text-xs text-[var(--color-text-muted)]"
+                    >React</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full border border-white/10 text-xs text-[var(--color-text-muted)]"
+                    >Tailwind</span
+                  >
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="bento-card rounded-3xl overflow-hidden group">
+              <div class="aspect-[4/3] overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop"
+                  alt="Project 3"
+                  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div class="p-8">
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-2xl font-bold">Flow State</h3>
+                  <i
+                    data-lucide="arrow-up-right"
+                    class="text-[var(--color-primary)]"
+                  ></i>
+                </div>
+                <p class="text-[var(--color-text-muted)] mb-6">
+                  Productivity application with focus on minimal interactions.
+                </p>
+                <div class="flex gap-2">
+                  <span
+                    class="px-3 py-1 rounded-full border border-white/10 text-xs text-[var(--color-text-muted)]"
+                    >Vue 3</span
+                  >
+                  <span
+                    class="px-3 py-1 rounded-full border border-white/10 text-xs text-[var(--color-text-muted)]"
+                    >Firebase</span
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Clients/Tech Stack Marquee -->
+      <section class="py-20 border-y border-white/5 overflow-hidden">
+        <div class="flex whitespace-nowrap animate-marquee">
+          <!-- Set 1 -->
+          <div class="flex items-center gap-20 mr-20">
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >GOOGLE</span
+            >
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >SPOTIFY</span
+            >
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >NIKE</span
+            >
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >APPLE</span
+            >
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >ADOBE</span
+            >
+          </div>
+          <!-- Set 2 for seamless loop -->
+          <div class="flex items-center gap-20 mr-20">
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >GOOGLE</span
+            >
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >SPOTIFY</span
+            >
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >NIKE</span
+            >
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >APPLE</span
+            >
+            <span
+              class="text-4xl font-bold text-white/20 hover:text-[var(--color-primary)] transition-colors cursor-default"
+              >ADOBE</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-20 border-t border-white/10">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 mb-20">
+          <div>
+            <h2
+              class="text-6xl font-bold tracking-tighter mb-8 max-w-lg leading-[0.9]"
+            >
+              Let's build the future together.
+            </h2>
+          </div>
+          <div class="flex flex-col justify-between items-start md:items-end">
+            <div class="flex gap-6 mb-8">
+              <a
+                href="#"
+                class="p-4 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all"
+              >
+                <i data-lucide="twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="p-4 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all"
+              >
+                <i data-lucide="instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="p-4 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all"
+              >
+                <i data-lucide="linkedin"></i>
+              </a>
+              <a
+                href="#"
+                class="p-4 rounded-full border border-white/10 hover:bg-white hover:text-black transition-all"
+              >
+                <i data-lucide="dribbble"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-white/10 text-sm text-[var(--color-text-muted)]"
+        >
+          <p>&copy; 2025 NEO-VIBE Template. All rights reserved.</p>
+          <div class="flex gap-8">
+            <a href="#" class="hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-white transition-colors"
+              >Terms of Service</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

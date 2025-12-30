@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | NEO-VIBE</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS v4 -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-background: #050505;
+        --color-surface: #121212;
+        --color-primary: #d4ff00;
+        --color-text-main: #ededed;
+        --color-text-muted: #888888;
+
+        --font-sans: "Inter", sans-serif;
+        --font-display: "Space Grotesk", sans-serif;
+      }
+
+      body {
+        background-color: var(--color-background);
+        color: var(--color-text-main);
+        font-family: var(--font-sans);
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: var(--font-display);
+      }
+
+      .glass-panel {
+        background: rgba(18, 18, 18, 0.6);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      /* Minimal Input Styles */
+      .minimal-input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        color: white;
+        padding: 1rem 0;
+        width: 100%;
+        outline: none;
+        transition: all 0.3s ease;
+        font-size: 1.125rem;
+      }
+
+      .minimal-input:focus {
+        border-bottom-color: var(--color-primary);
+      }
+
+      .minimal-input::placeholder {
+        color: rgba(255, 255, 255, 0.3);
+      }
+    </style>
+  </head>
+  <body class="antialiased overflow-hidden h-screen flex flex-col">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 py-4">
+      <div class="container mx-auto px-6">
+        <nav
+          class="glass-panel rounded-full px-6 py-3 flex items-center justify-between"
+        >
+          <a href="index.html" class="text-2xl font-bold tracking-tighter">
+            NEO<span class="text-[var(--color-primary)]">-VIBE</span>
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="about.html"
+              class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors"
+              >Services</a
+            >
+            <a
+              href="blog.html"
+              class="text-sm font-medium hover:text-[var(--color-primary)] transition-colors"
+              >Blog</a
+            >
+            <a
+              href="contact.html"
+              class="px-5 py-2 bg-[var(--color-primary)] text-black font-bold rounded-full hover:bg-white transition-colors"
+            >
+              Lets Talk
+            </a>
+          </div>
+
+          <button class="md:hidden text-white">
+            <i data-lucide="menu"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow pt-24 md:pt-0">
+      <div class="h-full container mx-auto px-6 flex items-center">
+        <div class="w-full grid lg:grid-cols-2 gap-20 items-center">
+          <!-- Left: Info -->
+          <div class="space-y-12">
+            <h1
+              class="text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter"
+            >
+              LET'S CREATE<br />
+              SOMETHING<br />
+              <span class="text-[var(--color-primary)]">LEGENDARY.</span>
+            </h1>
+
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[var(--color-primary)]"
+                >
+                  <i data-lucide="mail"></i>
+                </div>
+                <div>
+                  <p class="text-[var(--color-text-muted)] text-sm">
+                    Send me a mail
+                  </p>
+                  <a
+                    href="mailto:hello@neovibe.com"
+                    class="text-xl hover:text-[var(--color-primary)] transition-colors"
+                    >hello@neovibe.com</a
+                  >
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div
+                  class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-[var(--color-primary)]"
+                >
+                  <i data-lucide="phone"></i>
+                </div>
+                <div>
+                  <p class="text-[var(--color-text-muted)] text-sm">Call me</p>
+                  <a
+                    href="tel:+1234567890"
+                    class="text-xl hover:text-[var(--color-primary)] transition-colors"
+                    >+1 (555) 000-0000</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="glass-panel p-10 md:p-14 rounded-[3rem]">
+            <form class="space-y-8">
+              <div class="grid md:grid-cols-2 gap-8">
+                <div class="space-y-2">
+                  <label
+                    class="text-sm text-[var(--color-text-muted)] uppercase tracking-wider"
+                    >Your Name</label
+                  >
+                  <input
+                    type="text"
+                    class="minimal-input"
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label
+                    class="text-sm text-[var(--color-text-muted)] uppercase tracking-wider"
+                    >Your Email</label
+                  >
+                  <input
+                    type="email"
+                    class="minimal-input"
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  class="text-sm text-[var(--color-text-muted)] uppercase tracking-wider"
+                  >Project Budget</label
+                >
+                <select class="minimal-input bg-transparent">
+                  <option class="bg-black">$5k - $10k</option>
+                  <option class="bg-black">$10k - $25k</option>
+                  <option class="bg-black">$25k+</option>
+                </select>
+              </div>
+
+              <div class="space-y-2">
+                <label
+                  class="text-sm text-[var(--color-text-muted)] uppercase tracking-wider"
+                  >Message</label
+                >
+                <textarea
+                  class="minimal-input h-32 resize-none"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+
+              <button
+                type="button"
+                class="group w-full py-4 bg-[var(--color-primary)] text-black font-bold uppercase tracking-widest rounded-full hover:bg-white transition-colors flex items-center justify-center gap-2"
+              >
+                Send Message
+                <i
+                  data-lucide="send"
+                  class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                ></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
